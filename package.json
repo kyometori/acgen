@@ -1,0 +1,49 @@
+{
+  "name": "AC-Message-Generator",
+  "version": "1.0.0",
+  "description": "Generate a discord message that looks like AC's saying",
+  "main": "index.js",
+  "author": "kyometori",
+  "license": "",
+  "dependencies": {
+    "@skyra/discord-components-core": "^2.11.2",
+    "@skyra/discord-components-react": "^2.11.2",
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/react": "^11.1.0",
+    "@testing-library/user-event": "^12.1.10",
+    "gh-pages": "^3.2.3",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-scripts": "2.x.x",
+    "web-vitals": "^1.0.1",
+    "yarn": "^1.22.11"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "deploy": "gh-pages -d build"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not ie <= 10",
+      "not ie_mob <= 10",
+      "not bb <= 10",
+      "not op_mob <= 12.1",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
