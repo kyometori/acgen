@@ -5,6 +5,7 @@
   "main": "index.js",
   "author": "kyometori",
   "license": "",
+  "homepage": "https://kyometori.github.io/acgen",
   "dependencies": {
     "@skyra/discord-components-core": "^2.11.2",
     "@skyra/discord-components-react": "^2.11.2",
