@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "1df0a61563fc35f12437",
+    "revision": "d099fcec6661a079bad4",
     "url": "/acgen/static/css/main.3e42e066.chunk.css"
   },
   {
-    "revision": "1df0a61563fc35f12437",
-    "url": "/acgen/static/js/main.9db716cc.chunk.js"
+    "revision": "d099fcec6661a079bad4",
+    "url": "/acgen/static/js/main.72d005fa.chunk.js"
   },
   {
     "revision": "0a228a5857b65c1e6ac9",
@@ -36,7 +36,7 @@ self.__precacheManifest = [
     "url": "/acgen/static/media/avatar-diep.0e11b51d.png"
   },
   {
-    "revision": "ab9600b43f76b52b87b758c5528eff7f",
+    "revision": "b10f4502085c0b6adaa7341cd563592f",
     "url": "/acgen/index.html"
   }
 ];
