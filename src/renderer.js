@@ -4,6 +4,7 @@ import avatar_diep from './asset/avatar-diep.png';
 import {
   DiscordMessages,
   DiscordMessage,
+  DiscordAttachment,
   DiscordMention
 } from "@skyra/discord-components-react";
 
@@ -23,6 +24,17 @@ export default function Renderer(props) {
       >
         {""}
         {props.content}
+        <div>
+        {
+        /\.(bmp|jpe?g|png|gif|webp|tiff)$/i.test(props.attachment) ?
+          <DiscordAttachment
+            slot="attachments"
+            url={props.attachment}
+            style={{ maxWidth: '256px' }}
+            alt="attachment"
+          /> : ""
+        }
+        </div>
       </DiscordMessage>
     </DiscordMessages>
   );

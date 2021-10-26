@@ -14,11 +14,11 @@ class AvatarInput extends React.Component {
 
   render() {
     return (
-      <fieldset onChange={this.handleChange}>
+      <fieldset>
         <legend>頭像</legend>
-        <input type="radio" name="avatar" id="new" value="sena" checked={this.state.check === "sena"} />
+        <input type="radio" name="avatar" id="new" value="sena" onChange={this.handleChange} checked={this.state.check === "sena"} />
         <label htmlFor="new">聖奈</label>
-        <input type="radio" name="avatar" id="old" value="diep" checked={this.state.check === "diep"} />
+        <input type="radio" name="avatar" id="old" value="diep" onChange={this.handleChange} checked={this.state.check === "diep"} />
         <label htmlFor="old">Diep.io</label>
       </fieldset>
     )

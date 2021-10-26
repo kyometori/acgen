@@ -14,3 +14,7 @@ fieldset.half {
 input {
   margin: 10px;
 }
+
+.discord-image-wrapper img {
+  max-width: 256px;
+}
