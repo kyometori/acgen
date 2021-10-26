@@ -12,7 +12,7 @@ const avatar = {
   diep: avatar_diep
 }
 
-export default function Rederer(props) {
+export default function Renderer(props) {
   return (
     <DiscordMessages style={{ minHeight: '90px' }} light-theme={props.light}>
       <DiscordMessage
