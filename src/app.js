@@ -11,6 +11,13 @@ import TimestampInput from './components/timestampInput.js';
 import LightInput from './components/lightInput.js';
 import AttachmentInput from './components/attachmentInput.js';
 
+// Default Settings
+import config from './default.json';
+
+Array.prototype.random = function() {
+  return this[~~(Math.random() * this.length)];
+}
+
 class App extends React.Component {
   constructor(props) {
     super(props);
@@ -23,11 +30,11 @@ class App extends React.Component {
 
     const now = new Date();
     this.state = {
-      content: '對，你可以用它產生各種我沒說過的話，爽了嗎',
+      content: config.content.random(),
       avatar: 'sena',
       color: '#657c89',
       timestamp: `${now.getFullYear()}/${now.getMonth()+1}/${now.getDate()}`,
-      attachment: 'https://cdn.discordapp.com/attachments/813311003793686559/902584423558557728/gif.gif',
+      attachment: config.attachments.random(),
       light: false
     }
 
