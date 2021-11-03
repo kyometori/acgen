@@ -36,7 +36,7 @@ self.__precacheManifest = [
     "url": "/acgen/static/media/avatar-diep.0e11b51d.png"
   },
   {
-    "revision": "9fbb8c127534702aef620aba708e615f",
+    "revision": "b540265974d404dd89bfceeb595b07b7",
     "url": "/acgen/index.html"
   }
 ];
