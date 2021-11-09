@@ -18,3 +18,20 @@ input {
 .discord-image-wrapper img {
   max-width: 256px;
 }
+
+a {
+  color: #005485;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #005485;
+}
+
+a:hover {
+  color: #008020;
+}
+
+a:active {
+  color: #37CD68;
+}

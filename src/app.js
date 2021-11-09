@@ -69,7 +69,19 @@ class App extends React.Component {
 
     return (
       <React.Fragment>
-        <h1>AC 訊息產生器</h1>
+        <header style={{
+          display: 'flex',
+          flexDirection: 'row',
+          // lineHeight: '50px',
+          margin: '20px',
+          paddingTop: '10px',
+          lineHeight: '60px'
+        }}>
+          <div style={{ fontWeight: 'bold', fontSize: '40px', width: '500px' }}>AC 訊息產生器</div>
+          <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'flex-end', width: 'calc(100vw - 500px)' }}>
+            <a href="https://github.com/kyometori/acgen">原始碼</a>
+          </div>
+        </header>
         <div style={{ margin: '30px 0' }}>
           <div style={{
             display: 'flex',
