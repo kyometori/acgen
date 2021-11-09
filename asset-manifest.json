@@ -1,7 +1,7 @@
 {
-  "main.css": "/acgen/static/css/main.f824552e.chunk.css",
-  "main.js": "/acgen/static/js/main.5c901f53.chunk.js",
-  "main.js.map": "/acgen/static/js/main.5c901f53.chunk.js.map",
+  "main.css": "/acgen/static/css/main.510dffbc.chunk.css",
+  "main.js": "/acgen/static/js/main.1035d206.chunk.js",
+  "main.js.map": "/acgen/static/js/main.1035d206.chunk.js.map",
   "polyfills-dom.js": "/acgen/static/js/polyfills-dom.1fb4aa5e.chunk.js",
   "polyfills-dom.js.map": "/acgen/static/js/polyfills-dom.1fb4aa5e.chunk.js.map",
   "runtime~main.js": "/acgen/static/js/runtime~main.5561d6d4.js",
@@ -13,9 +13,9 @@
   "static/js/5.63133586.chunk.js": "/acgen/static/js/5.63133586.chunk.js",
   "static/js/5.63133586.chunk.js.map": "/acgen/static/js/5.63133586.chunk.js.map",
   "index.html": "/acgen/index.html",
-  "precache-manifest.63f4a70adf0172f549a666d50c923220.js": "/acgen/precache-manifest.63f4a70adf0172f549a666d50c923220.js",
+  "precache-manifest.fa7a3246e789cdb9e96544d4cd036171.js": "/acgen/precache-manifest.fa7a3246e789cdb9e96544d4cd036171.js",
   "service-worker.js": "/acgen/service-worker.js",
-  "static/css/main.f824552e.chunk.css.map": "/acgen/static/css/main.f824552e.chunk.css.map",
+  "static/css/main.510dffbc.chunk.css.map": "/acgen/static/css/main.510dffbc.chunk.css.map",
   "static/media/avatar-diep.png": "/acgen/static/media/avatar-diep.0e11b51d.png",
   "static/media/avatar-sena.png": "/acgen/static/media/avatar-sena.d8ad4cf5.png"
 }
