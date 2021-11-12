@@ -3,7 +3,7 @@ import React from 'react';
 // Message Renderer
 import Renderer from './renderer.js';
 
-// Components
+// Inputs
 import ContentInput from './components/contentInput.js';
 import AvatarInput from './components/avatarInput.js';
 import ColorInput from './components/colorInput.js';
@@ -72,7 +72,6 @@ class App extends React.Component {
         <header style={{
           display: 'flex',
           flexDirection: 'row',
-          // lineHeight: '50px',
           margin: '20px',
           paddingTop: '10px',
           lineHeight: '60px'

@@ -15,7 +15,7 @@ const avatar = {
 
 export default function Renderer(props) {
   return (
-    <DiscordMessages style={{ minHeight: '90px' }} light-theme={props.light}>
+    <DiscordMessages style={{ minHeight: '90px' }} light-theme={props.light} id="renderer">
       <DiscordMessage
         author="AC0xRPFS001"
         avatar={avatar[props.avatar]}
