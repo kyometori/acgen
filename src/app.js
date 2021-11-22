@@ -10,6 +10,7 @@ import ColorInput from './components/colorInput.js';
 import TimestampInput from './components/timestampInput.js';
 import LightInput from './components/lightInput.js';
 import AttachmentInput from './components/attachmentInput.js';
+import NameInput from './components/nameInput.js';
 
 // Default Settings
 import config from './default.json';
@@ -22,6 +23,7 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.handleContentChange = this.handleContentChange.bind(this);
+    this.handleNameChange = this.handleNameChange.bind(this);
     this.handleAvatarChange = this.handleAvatarChange.bind(this);
     this.handleColorChange = this.handleColorChange.bind(this);
     this.handleTimestampChange = this.handleTimestampChange.bind(this);
@@ -31,6 +33,7 @@ class App extends React.Component {
     const now = new Date();
     this.state = {
       content: config.content.random(),
+      name: 'AC0xRPFS001',
       avatar: 'sena',
       color: '#657c89',
       timestamp: `${now.getFullYear()}/${now.getMonth()+1}/${now.getDate()}`,
@@ -42,6 +45,10 @@ class App extends React.Component {
 
   handleContentChange(value) {
     this.setState({ content: value });
+  }
+
+  handleNameChange(value) {
+    this.setState({ name: value });
   }
 
   handleAvatarChange(value) {
@@ -65,7 +72,7 @@ class App extends React.Component {
   }
 
   render() {
-    const { content, avatar, color, timestamp, attachment, light } = this.state;
+    const { content, avatar, name, color, timestamp, attachment, light } = this.state;
 
     return (
       <React.Fragment>
@@ -88,8 +95,9 @@ class App extends React.Component {
             justifyContent: 'space-evenly',
             width: '100%'
           }} className="column">
-            <LightInput default={color} onCheckChange={this.handleEnableLightTheme}/>
+            <LightInput default={light} onCheckChange={this.handleEnableLightTheme}/>
             <ColorInput default={color} onColorChange={this.handleColorChange}/>
+            <NameInput default={name} onNameChange={this.handleNameChange} />
             <AvatarInput default={avatar} onAvatarChange={this.handleAvatarChange} />
             <TimestampInput default={timestamp} onTimestampChange={this.handleTimestampChange} />
           </div>
@@ -102,6 +110,7 @@ class App extends React.Component {
         </div>
         <hr />
         <Renderer
+          name={name}
           content={content}
           avatar={avatar}
           color={color}

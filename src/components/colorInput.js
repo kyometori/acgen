@@ -12,7 +12,7 @@ class ColorInput extends React.Component {
 
   render() {
     return (
-      <fieldset className="half">
+      <fieldset>
         <legend>顏色</legend>
         <input type="color" value={this.props.default} onChange={this.handleChange} />
       </fieldset>

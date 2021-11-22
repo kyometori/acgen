@@ -16,11 +16,10 @@ const avatar = {
 }
 
 export default function Renderer(props) {
-  const name = props.avatar === "chocomint" ? "chocomint" : "AC0xRPFS001";
   return (
     <DiscordMessages style={{ minHeight: '90px' }} light-theme={props.light} id="renderer">
       <DiscordMessage
-        author={name}
+        author={props.name}
         avatar={avatar[props.avatar]}
         roleColor={props.color}
         timestamp={props.timestamp}

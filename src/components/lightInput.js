@@ -12,7 +12,7 @@ class LightInput extends React.Component {
 
   render() {
     return (
-      <fieldset className="half" onChange={this.handleChange}>
+      <fieldset onChange={this.handleChange}>
         <legend>明亮背景</legend>
         <input type="checkbox" id="box" />
         <label htmlFor="box">開啟</label>
