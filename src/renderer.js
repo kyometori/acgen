@@ -1,6 +1,7 @@
 import React from 'react';
 import avatar_sena from './asset/avatar-sena.png';
 import avatar_diep from './asset/avatar-diep.png';
+import avatar_chocomint from './asset/avatar-chocomint.png';
 import {
   DiscordMessages,
   DiscordMessage,
@@ -10,14 +11,16 @@ import {
 
 const avatar = {
   sena: avatar_sena,
-  diep: avatar_diep
+  diep: avatar_diep,
+  chocomint: avatar_chocomint
 }
 
 export default function Renderer(props) {
+  const name = props.avatar === "chocomint" ? "chocomint" : "AC0xRPFS001";
   return (
     <DiscordMessages style={{ minHeight: '90px' }} light-theme={props.light} id="renderer">
       <DiscordMessage
-        author="AC0xRPFS001"
+        author={name}
         avatar={avatar[props.avatar]}
         roleColor={props.color}
         timestamp={props.timestamp}
