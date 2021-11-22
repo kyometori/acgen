@@ -15,7 +15,7 @@
     "gh-pages": "^3.2.3",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "react-scripts": "2.x.x",
+    "react-scripts": "4.0.3",
     "web-vitals": "^1.0.1",
     "yarn": "^1.22.11"
   },
@@ -35,6 +35,7 @@
   "browserslist": {
     "production": [
       ">0.2%",
+      "not dead",
       "not ie <= 10",
       "not ie_mob <= 10",
       "not bb <= 10",
