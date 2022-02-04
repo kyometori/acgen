@@ -17,6 +17,7 @@ class NameInput extends React.Component {
         <select onChange={this.handleChange}>
           <option value="AC0xRPFS001">AC0xRPFS001</option>
           <option value="chocomint">chocomint</option>
+          <option value="chocomint++">chocomint++</option>
         </select>
       </fieldset>
     )

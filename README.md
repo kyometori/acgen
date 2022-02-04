@@ -8,9 +8,10 @@
 
 ## 我也想要一個我的
 自己做。   
-你可以 fork 這份專案回去，注意 /src/renderer.js 檔案，名字的部分只要改他就好了。   
-頭像的部分，你需要把 /src/asset 裡面的東西換成你的頭像，接著去 /src/renderer.js 改成匯入你的頭像，接著到 /src/components/avatarInput.js 去把選單改成選你的頭像，最後再到 /src/app.js 把預設也改成你的預設頭像就好了，簡單吧。
-最後還有一些預設行為（預設文字、附件）要去 /src/default.json 改。
+你可以 fork 這份專案回去自行更改。   
+名字的部分，注意 `/src/components/nameInput.js` 裡面的 `option`，只需要更改裡面的值就好了。注意 `value` 就是顯示出來的名字。接著到 `src/app.js` 將預設換為你的名字。   
+頭像的部分，你需要把 `/src/asset` 裡面的東西換成你的頭像，接著去 `/src/renderer.js` 改成匯入你的頭像。然後要去 `/src/components/avatarInput.js` 去把選單的選項改成選擇你的頭像，最後也要到 `/src/app.js` 把預設也改成你的預設頭像就大功告成了，簡單吧。
+最後還有一些預設行為（預設文字、附件）可以在 /src/default.json 改。
 
 ## 太難了我不會
 那就等我想把他變成簡單就能用再說吧，或是找一位高手願意幫你改成你的格式。
