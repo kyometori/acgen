@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/acgen/static/css/main.1454741c.chunk.css",
-    "main.js": "/acgen/static/js/main.15be60fa.chunk.js",
-    "main.js.map": "/acgen/static/js/main.15be60fa.chunk.js.map",
+    "main.js": "/acgen/static/js/main.ff02c896.chunk.js",
+    "main.js.map": "/acgen/static/js/main.ff02c896.chunk.js.map",
     "polyfills-dom.js": "/acgen/static/js/polyfills-dom.c4abca6b.chunk.js",
     "polyfills-dom.js.map": "/acgen/static/js/polyfills-dom.c4abca6b.chunk.js.map",
     "runtime-main.js": "/acgen/static/js/runtime-main.a938a7cf.js",
@@ -25,6 +25,6 @@
     "static/js/runtime-main.a938a7cf.js",
     "static/js/3.049f4c74.chunk.js",
     "static/css/main.1454741c.chunk.css",
-    "static/js/main.15be60fa.chunk.js"
+    "static/js/main.ff02c896.chunk.js"
   ]
 }
