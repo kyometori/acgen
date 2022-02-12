@@ -1,32 +1,21 @@
-import React from 'react';
+export default function contentInput(props) {
 
-class ContentInput extends React.Component {
-  constructor(props) {
-    super(props);
-    this.handleChange = this.handleChange.bind(this);
+  const handleChange = e => {
+    props.onContentChange(e.target.value);
   }
 
-  handleChange(e) {
-    this.props.onContentChange(e.target.value);
-  }
-
-  render() {
-    const { content } = this.props;
-    return (
-      <fieldset>
-        <legend>訊息內容</legend>
-        <input
-          type="text"
-          value={content}
-          onChange={this.handleChange}
-          style={{
-            width: '80vw',
-            height: '30px'
-          }}
-        />
-      </fieldset>
-    );
-  }
+  return (
+    <fieldset>
+      <legend>訊息內容</legend>
+      <input
+        type="text"
+        value={props.content}
+        onChange={handleChange}
+        style={{
+          width: '80vw',
+          height: '30px'
+        }}
+      />
+    </fieldset>
+  );
 }
-
-export default ContentInput

@@ -1,4 +1,4 @@
-import React from 'react';
+import { useState } from 'react';
 
 // Message Renderer
 import Renderer from './renderer.js';
@@ -7,7 +7,7 @@ import Renderer from './renderer.js';
 import ContentInput from './components/contentInput.js';
 import AvatarInput from './components/avatarInput.js';
 import ColorInput from './components/colorInput.js';
-import TimestampInput from './components/timestampInput.js';
+import TimeInput from './components/timeInput.js';
 import LightInput from './components/lightInput.js';
 import AttachmentInput from './components/attachmentInput.js';
 import NameInput from './components/nameInput.js';
@@ -19,108 +19,71 @@ Array.prototype.random = function() {
   return this[~~(Math.random() * this.length)];
 }
 
-class App extends React.Component {
-  constructor(props) {
-    super(props);
-    this.handleContentChange = this.handleContentChange.bind(this);
-    this.handleNameChange = this.handleNameChange.bind(this);
-    this.handleAvatarChange = this.handleAvatarChange.bind(this);
-    this.handleColorChange = this.handleColorChange.bind(this);
-    this.handleTimestampChange = this.handleTimestampChange.bind(this);
-    this.handleAttachmentChange = this.handleAttachmentChange.bind(this);
-    this.handleEnableLightTheme = this.handleEnableLightTheme.bind(this);
+function App() {
 
-    const now = new Date();
-    this.state = {
-      content: config.content.random(),
-      name: 'AC0xRPFS001',
-      avatar: 'sena',
-      color: '#657c89',
-      timestamp: `${now.getFullYear()}/${now.getMonth()+1}/${now.getDate()}`,
-      attachment: config.attachments.random(),
-      light: false
-    }
+  const now = new Date();
+  const [content, setContent] = useState(config.content.random());
+  const [name, setName] = useState('AC0xRPFS001');
+  const [avatar, setAvatar] = useState('sena');
+  const [color, setColor] = useState('#657c89');
+  const [time, setTime] = useState(`${now.getFullYear()}/${now.getMonth()+1}/${now.getDate()}`);
+  const [light, setLight] = useState(false);
+  const [attachment, setAttachment] = useState([]);
 
+  const handleContentChange = value => {
+    setContent(value);
   }
 
-  handleContentChange(value) {
-    this.setState({ content: value });
+  const handleNameChange = value => {
+    setName(value);
   }
 
-  handleNameChange(value) {
-    this.setState({ name: value });
+  const handleAvatarChange = value => {
+    setAvatar(value);
   }
 
-  handleAvatarChange(value) {
-    this.setState({ avatar: value });
+  const handleColorChange = value => {
+    setColor(value);
   }
 
-  handleColorChange(value) {
-    this.setState({ color: value });
+  const handleTimeChange = value =>  {
+    setTime(value);
   }
 
-  handleTimestampChange(value) {
-    this.setState({ timestamp: value });
+  const handleAttachmentChange = value => {
+    setAttachment(value);
   }
 
-  handleAttachmentChange(value) {
-    this.setState({ attachment: value });
+  const handleEnableLightTheme = value => {
+    setLight(value);
   }
 
-  handleEnableLightTheme(value) {
-    this.setState({ light: value });
-  }
-
-  render() {
-    const { content, avatar, name, color, timestamp, attachment, light } = this.state;
-
-    return (
-      <React.Fragment>
-        <header style={{
-          display: 'flex',
-          flexDirection: 'row',
-          margin: '20px',
-          paddingTop: '10px',
-          lineHeight: '60px'
-        }}>
-          <div style={{ fontWeight: 'bold', fontSize: '40px', width: '500px' }}>AC 訊息產生器</div>
-          <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'flex-end', width: 'calc(100vw - 500px)' }}>
-            <a href="https://github.com/kyometori/acgen">原始碼</a>
-          </div>
-        </header>
-        <div style={{ margin: '30px 0' }}>
-          <div style={{
-            display: 'flex',
-            flexDirection: 'row',
-            justifyContent: 'space-evenly',
-            width: '100%'
-          }} className="column">
-            <LightInput default={light} onCheckChange={this.handleEnableLightTheme}/>
-            <ColorInput default={color} onColorChange={this.handleColorChange}/>
-            <NameInput default={name} onNameChange={this.handleNameChange} />
-            <AvatarInput default={avatar} onAvatarChange={this.handleAvatarChange} />
-            <TimestampInput default={timestamp} onTimestampChange={this.handleTimestampChange} />
-          </div>
-          <div style={{ margin: '10px' }}>
-            <AttachmentInput url={attachment} onAttachmentChange={this.handleAttachmentChange} />
-          </div>
-          <div style={{ margin: '10px' }}>
-            <ContentInput content={content} onContentChange={this.handleContentChange} />
-          </div>
-        </div>
-        <hr />
+  return (
+    <>
+      <header>
+        <div id="title">AC 訊息產生器</div>
+        <a href="https://github.com/kyometori/acgen">原始碼</a>
+      </header>
+      <div id="inputs">
+        <LightInput default={light} onCheckChange={handleEnableLightTheme}/>
+        <ColorInput default={color} onColorChange={handleColorChange}/>
+        <NameInput default={name} onNameChange={handleNameChange} />
+        <AvatarInput default={avatar} onAvatarChange={handleAvatarChange} />
+        <TimeInput default={time} onTimeChange={handleTimeChange} />
+        <AttachmentInput url={attachment} onAttachmentChange={handleAttachmentChange} />
+        <ContentInput content={content} onContentChange={handleContentChange} />
         <Renderer
           name={name}
           content={content}
           avatar={avatar}
           color={color}
-          timestamp={timestamp}
+          timestamp={time}
           light={light}
           attachment={attachment}
         />
-      </React.Fragment>
-    );
-  }
+      </div>
+    </>
+  );
 }
 
 export default App;

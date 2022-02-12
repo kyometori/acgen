@@ -1,27 +1,21 @@
-import React from 'react';
+export default function NameInput(props) {
 
-class NameInput extends React.Component {
-  constructor(props) {
-    super(props);
-    this.handleChange = this.handleChange.bind(this);
+  const handleChange = e => {
+    props.onNameChange(e.target.value);
   }
 
-  handleChange(e) {
-    this.props.onNameChange(e.target.value);
-  }
-
-  render() {
-    return (
-      <fieldset>
-        <legend>名稱</legend>
-        <select onChange={this.handleChange}>
-          <option value="AC0xRPFS001">AC0xRPFS001</option>
-          <option value="chocomint">chocomint</option>
-          <option value="chocomint++">chocomint++</option>
-        </select>
-      </fieldset>
-    )
-  }
+  return (
+    <fieldset>
+      <legend>名稱</legend>
+      <select onChange={handleChange}>
+        <NameOption name="AC0xRPFS001" />
+        <NameOption name="chocomint" />
+        <NameOption name="chocomint++" />
+      </select>
+    </fieldset>
+  );
 }
 
-export default NameInput;
+function NameOption({ name }) {
+  return <option value={name}>{name}</option>
+}

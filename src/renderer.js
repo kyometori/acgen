@@ -7,7 +7,7 @@ import {
   DiscordMessage,
   DiscordAttachment,
   DiscordMention
-} from "@skyra/discord-components-react";
+} from '@skyra/discord-components-react';
 
 const avatar = {
   sena: avatar_sena,
