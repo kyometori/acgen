@@ -6,7 +6,6 @@ import {
   DiscordMessages,
   DiscordMessage,
   DiscordAttachment,
-  DiscordMention
 } from '@skyra/discord-components-react';
 
 const avatar = {

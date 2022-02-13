@@ -15,14 +15,13 @@ import NameInput from './components/nameInput.js';
 // Default Settings
 import config from './default.json';
 
-Array.prototype.random = function() {
-  return this[~~(Math.random() * this.length)];
+function random(array) {
+  return array[~~(Math.random() * array.length)];
 }
 
-function App() {
-
+export default function App() {
   const now = new Date();
-  const [content, setContent] = useState(config.content.random());
+  const [content, setContent] = useState(random(config.content));
   const [name, setName] = useState('AC0xRPFS001');
   const [avatar, setAvatar] = useState('sena');
   const [color, setColor] = useState('#657c89');
@@ -85,5 +84,3 @@ function App() {
     </>
   );
 }
-
-export default App;
