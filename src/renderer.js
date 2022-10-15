@@ -1,5 +1,6 @@
 import React from 'react';
-import avatar_sena from './asset/avatar-sena.png';
+import avatar_sena_shiawase from './asset/avatar-sena-shiawase.png';
+import avatar_sena_julietta from './asset/avatar-sena-julietta.png'
 import avatar_diep from './asset/avatar-diep.png';
 import avatar_chocomint from './asset/avatar-chocomint.png';
 import {
@@ -9,7 +10,8 @@ import {
 } from '@skyra/discord-components-react';
 
 const avatar = {
-  sena: avatar_sena,
+  sena_shiawase: avatar_sena_shiawase,
+  sena_julietta: avatar_sena_julietta,
   diep: avatar_diep,
   chocomint: avatar_chocomint
 }
