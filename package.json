@@ -4,7 +4,7 @@
   "description": "Generate a discord message that looks like AC's saying",
   "author": "kyometori",
   "license": "MIT",
-  "homepage": "https://kyometori.github.io/acgen",
+  "homepage": "https://kyometori.github.io/acgen/",
   "dependencies": {
     "@babel/core": "^7.23.2",
     "@babel/preset-env": "^7.23.2",
