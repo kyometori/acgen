@@ -25,8 +25,10 @@ export default function Renderer(props) {
         roleColor={props.color}
         timestamp={props.timestamp}
       >
-        {""}
-        {props.content}
+        <div>
+          {""}
+          {props.content}
+        </div>
         <div>
         {
         /\.(bmp|jpe?g|png|gif|webp|tiff)$/i.test(props.attachment) ?
