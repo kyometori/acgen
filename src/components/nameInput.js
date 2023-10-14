@@ -11,6 +11,9 @@ export default function NameInput(props) {
         <NameOption name="AC0xRPFS001" />
         <NameOption name="chocomint" />
         <NameOption name="chocomint++" />
+        <NameOption name="Stellar" />
+        <NameOption name="Fluxline" />
+        <NameOption name="Serenitas" />
       </select>
     </fieldset>
   );
