@@ -61,8 +61,7 @@ export default (env, argv) => {
           type: 'website'
         }, 
         alwaysWriteToDisk: true, 
-        hash: true, 
-        xhtml: true 
+        hash: true
       }),
       new MiniCssExtractPlugin()
     ]
