@@ -20,7 +20,7 @@
 那就等我想把他變成簡單就能用再說吧，或是找一位高手願意幫你改成你的格式。
 
 ## 我會欸，然後呢
-喔你會喔，那太好了。接著你可以用 `yarn install` 下載所有你需要的東西，然後將 package.json 裡的 homepage 改成`""`，最後使用 `yarn build`，你的成品會在 dist/index.html，直接打開就好了。
+喔你會喔，那太好了。接著你可以用 `yarn install` 下載所有你需要的東西，然後將 package.json 裡的 homepage 改成`""`，最後使用 `yarn build`，你的成品會在 dist/index.html，直接打開就好了。   
 若你想要打包放上 Github Pages，要把 package.json 的 homepage 改成那個 Github Pages 的網址，然後確定你有跟一個遠端檔案庫連著後，一樣使用 `yarn build` 建出打包好的東西，再使用 `yarn deploy` 發布就好了。   
 
 ### build 失敗：Can't import the name export '...' from non EcmaScript module
