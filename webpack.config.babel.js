@@ -52,7 +52,17 @@ export default (env, argv) => {
       new HtmlWebpackPlugin({ 
         template: './public/index.html',
         favicon: './public/pic/favicon.png',
-        alwaysWriteToDisk: true
+        title: 'AC 訊息產生器', 
+        meta: {
+          charset: 'utf-8', 
+          viewport: 'width=device-width, initial-scale=1.0',
+          author: 'AC0xRPFS001', 
+          description: '一個 Discord 的訊息產生器，你可以使用它產生神似 AC0xRPFS001 這位用戶傳的訊息，但是可以自訂內容、時間、和更多細節！', 
+          type: 'website'
+        }, 
+        alwaysWriteToDisk: true, 
+        hash: true, 
+        xhtml: true 
       }),
       new MiniCssExtractPlugin()
     ]
