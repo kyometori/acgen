@@ -23,7 +23,7 @@ export default function App() {
   const now = new Date();
   const [content, setContent] = useState(random(config.content));
   const [name, setName] = useState('AC0xRPFS001');
-  const [avatar, setAvatar] = useState('sena_julietta');
+  const [avatar, setAvatar] = useState('sena_how_about_me_like_this');
   const [color, setColor] = useState('#657c89');
   const [time, setTime] = useState(`${now.getFullYear()}/${now.getMonth()+1}/${now.getDate()}`);
   const [light, setLight] = useState(false);
